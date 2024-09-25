@@ -1,2 +1,1 @@
-while True:
-    print('Ксюша лох')
+print('hello word')
