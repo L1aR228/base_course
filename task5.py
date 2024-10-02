@@ -1,8 +1,0 @@
-word1 = input()
-word2 = input()
-word3 = input()
-word4 = input()
-word5 = input()
-word6 = input()
-word7 = input()
-print(f'Шляпка гриба, покрытая {word1} кожиц{word2}й, держится на {word3} ножк{word4}.Снизу шляпка затянута {word5} плёнкой. Когда её уберёшь, откроется нижняя {word6} сторона шляпк{word7}')
