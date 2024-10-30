@@ -11,10 +11,12 @@ for i in range(N):
         else:
             trigonometry_array[i, j] = summ
 # Скучный метод 
-"""for line in trigonometry_array:
-    for stolb in line:
-        trigonometry_array[:, [1, 0]] = trigonometry_array[:, [1, 0]]
+
+a = N - 1
+b = M - 1
+
+trigonometry_array[:, a], trigonometry_array[:][b] = trigonometry_array[:, b], trigonometry_array[:][a]
+
 print(trigonometry_array)
-"""
-# ВРОДЕ НОРМ 
-print(trigonometry_array[::-1])
+
+
