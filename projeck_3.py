@@ -70,7 +70,7 @@ class QuizApp(QMainWindow):
 
 
         student_button.clicked.connect(self.name_lastname)
-        teacher_button.clicked.connect(self.proverka)
+        teacher_button.clicked.connect(self.ask_password)
 
 
         layout.addWidget(student_button)
@@ -97,7 +97,7 @@ class QuizApp(QMainWindow):
         password, ok = QInputDialog.getText(self, "Пароль", "Введите пароль:")
 
         if ok and password == "1234":
-            self.show_teacher_window()
+            self.proverka()
         else:
             QMessageBox.warning(self, "Ошибка", "Неверный пароль.")
 
