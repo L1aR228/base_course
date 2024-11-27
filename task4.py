@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 k = 0.1
-phi_max = 8 * np.pi 
+phi_max = 10 * np.pi 
 e = 2.71828
 def arhimed():
 
@@ -26,7 +26,7 @@ def log(b=0.2):
 
 def jezl():
 
-    p = np.arange(0, phi_max, 0.23)
+    p = np.arange(-2* np.pi, phi_max, 0.1)
     rho = k / np.sqrt(p)
     x = rho * np.cos(p)
     y = rho * np.sin(p)
@@ -48,4 +48,4 @@ def rose():
 
     plt.savefig('fig_11.png')
 if __name__ =='__main__':
-    rose()
+    jezl()
