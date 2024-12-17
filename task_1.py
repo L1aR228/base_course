@@ -1,29 +1,37 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-alpha = 0.1
-num_frames = 100
+def chikl():
+    R = 1  
+    t = np.linspace(0, 8 * np.pi, 100)
 
-fig, ax = plt.subplots()
-ax.set_xlim(-5, 5)
-ax.set_ylim(-5, 5)
-circle, = ax.plot([], [], lw=2)
 
-def init():
-    circle.set_data([], [])
-        return circle,
-def update(frame):
-     t = frame / 10
-     r = alpha * t
-     phi = np.linspace(0, 2 * np.pi, 100)
-     x = r * np.cos(phi)
-     y = r * np.sin(phi)
-    circle.set_data(x, y)
-        return circle,
+    x = R * (t - np.sin(t) ** 3)  # лучшее значение 1
+    y = R * (1 - np.cos(t) ** 3)
 
-ani = FuncAnimation(fig, update, frames=frames, interval=30)
 
-ani.save('animation_5.gif', writer="pillow")
+    plt.plot(x, y)
+    plt.title("Циклоида")
+    plt.axis('equal')
+    plt.grid()
+    plt.savefig('task_fig_1.png')
 
+def aster():
+    R = 1  
+    t = np.linspace(0, 8 * np.pi, 100)
+
+
+    x = R * (R * np.cos(t) ** 3)  # лучшее значение 1
+    y = R * (R * np.sin(t) ** 3)
+
+
+    plt.plot(x, y)
+    plt.title("Циклоида")
+    plt.axis('equal')
+    plt.grid()
+    plt.savefig('task_2.png')
+
+
+if __name__ =='__main__':
+    chikl()
